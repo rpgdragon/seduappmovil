@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Arduino de José Manuel Castellano Domínguez
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-refresher slot="fixed" (ionRefresh)="obtenerdatos($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Obteniendo datos....">
+    </ion-refresher-content>
+</ion-refresher>
+  <div class="ion-padding">
+
+<ion-item>
+	<ion-label>LDR</ion-label>
+	<ion-badge slot="end" color="warning">{{ldr}}</ion-badge>
+</ion-item>
+<ion-item>
+	<ion-label>Temperatura</ion-label>
+	<ion-badge slot="end" color="danger">{{temperatura}}</ion-badge>
+</ion-item>
+<ion-item>
+	<ion-label>Humedad</ion-label>
+	<ion-badge slot="end" color="success">{{humedad}}</ion-badge>
+</ion-item>
+<ion-item>
+	<ion-label>Eje X</ion-label>
+	<ion-badge slot="end" color="secondary">{{angX}}</ion-badge>
+</ion-item>
+<ion-item>
+	<ion-label>Eje Y</ion-label>
+	<ion-badge slot="end" color="tertiary">{{angY}}</ion-badge>
+</ion-item>
+<br>
+<br>
+Última actualización del {{ultimaact}}
+  </div>
+</ion-content>

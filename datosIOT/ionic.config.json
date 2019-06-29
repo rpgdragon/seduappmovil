@@ -1,0 +1,7 @@
+{
+  "name": "datosIOT",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
